@@ -1,0 +1,110 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+    <style>
+        #name { font-size: 250%}
+        h1 {text-align:center;}
+
+
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 150px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+h1 {text-align:center;}
+
+#date,#pay ,#cost {font-size: 40px;}
+
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin:0 0 0 0;
+}
+
+td {
+    height: 55px;
+    vertical-align: bottom;
+}
+
+        #date,#pay ,#cost , #pays{font-size: 25px;}
+        #pay {margin:55px 0 0 0}
+#history {font-size:170%;}
+
+.size {font-size:20px;}
+
+table#tab th {
+    background-color:rgba(60, 106, 157, 0.93);
+    color: white;}
+
+img.left {float:left;}
+img.right{float:right;}
+    </style>
+
+
+
+
+
+<p id="name">Summary Detail Of :<u><strong> Peter</strong></u></p>
+
+<div style="height: 160px; width: 100%; box-sizing:border-box; display:table;">
+    <div class="box" style="float:left;margin-right:30px; height:100%;   width:23.2%;display:table-cell;background: #E8E8E8;box-sizing: border-box;"><h1 style="font-size:26px;text-align:left; ">No. of Transactions with Peter :</h1><p class="size">4</p></div>
+    <div class="box" style="float:left; margin-right:30px; height:100%; width:23.2%;display:table-cell; background: #E8E8E8; box-sizing: border-box;"><h1 style="text-align:left; font-size:26px;">Number of Defaulted Payments:</h1><p class="size">2</p></div>
+    <div class="box" style="float:left;  height:100%; margin-right:30px; width:23.2%;display:table-cell; background: #E8E8E8; box-sizing: border-box;"><h1 style="text-align:left; font-size:26px;">Frequency of Successful transactions:</h1><p class="size">50%</p></div>
+    <div class="box" style="float:left;  height:100%; width:23.2%;display:table-cell; background: #E8E8E8; box-sizing: border-box;"><h1 style="text-align:left; font-size:26px;">Total Sum Absorbed:</h1><p class="size">$72</p></div>
+    <br style="clear:left" />
+</div>
+&nbsp
+
+    <p id="history"><strong>Past Split Transaction History:</strong></p>
+<table id="tab" style="width:100%">
+  <tr>
+      <th>Date:</th>
+      <th>Transaction Description:</th>
+    <th>Total Cost before Spliting:</th>
+
+    <th style="width:110px;">Cost Recipient Ought to Pay:</th>
+      <th>Percentage Set by Recipient</th>
+      <th>Amount Peter Paid</th>
+      <th>Total Sum Absorbed By Peter:</th>
+
+
+
+  </tr>
+  <tr style=" background-color: #eee;">
+
+      <td>5/12/2016</td><td style="width:16.9%;">Korean BBQ</td><td>$720</td><td style="width: 11.4%">$144</td><td style="width:17%;">20%</td><td>$144</td><td>$0</td>
+  </tr>
+    <tr><td>3/11/2016</td><td>Thai BBQ</td><td>$240</td><td>$48</td><td>-</td><td>$0</td><td>$48</td></tr>
+     <tr style=" background-color: #eee;"><td>2/10/2016</td><td>Seafood Buffet</td><td>$120</td><td>$30</td><td>-</td><td>$0</td><td>$24</td></tr>
+     <tr><td>1/9/2016</td><td>Vegetarian Buffet</td><td>$360</td><td>$54</td><td>-</td><td>$54</td><td>$0</td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></tr>
+</table>
+
+<img class="left" src="static/images/team_image/Needed1.svg" alt="Smiley face" width="50.2%" height="520">
+<img class="right" src="static/images/team_image/Needed.svg" alt="Smiley face" width="49.7%" height="520">
+
+{% endblock %}

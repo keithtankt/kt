@@ -1,0 +1,224 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+    .h{
+        text-align:center;
+        background-color:#eee;
+        padding:30px;
+         margin:auto ;
+        font-weight:300;
+    }
+
+    #right{
+        float:right;
+
+    }
+
+    #des{
+        padding-left:20px;
+        padding-right:20px;
+        font-weight:300;
+        background-color:rgba(60,106,157,0.93);
+        margin:auto;
+        color:white;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+
+    .add{
+        display:inline-block;
+        padding-left:20px;
+        padding-right:20px;
+
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    .option{
+        display:inline-block;
+        padding-left:50px;
+        padding-right:50px;
+
+    }
+
+
+
+
+    #thead1{
+        padding-right:50px;
+    }
+    #thead2{
+        padding-right:50px;
+    }
+     #thead3{
+        padding-right:50px;
+    }
+    #td1{
+        padding-bottom:10px
+
+    }
+    #td2{
+        padding-bottom:10px
+    }
+
+    .tab{
+        border:1px solid black;
+        padding:20px;
+    }
+    .tab1{
+        border:1px solid black;
+        padding:20px;
+    }
+    .tab2{
+        border:1px solid black;
+        padding:20px;
+    }
+    .everything{
+
+       padding-top:30px;
+    }
+    #lastline{
+        text-align:center;
+        font-weight:bold;
+        font-size:140%;
+    }
+
+
+
+    #a1{
+        color:green;
+    }
+
+
+</style>
+
+
+
+<h1 class="h">Request Bill Split Payment</h1>
+
+
+<h1 id="des">
+
+    Item Description: Monster Curry
+
+<div id="right">Amount paid in total: $100.20</div>
+
+</h1>
+
+
+<div class="everything" align="center">
+
+<div class="add">
+    Add new people to split bill with:
+    <br>
+    <br>
+    <input type="text" placeholder="Contact No./Name">
+    <input type="button" value="search">
+
+<br>
+    <br>
+    <table class="tab">
+        <tr>
+            <th id="thead1">Name</th>
+            <th>Contact Number</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Shane</td>
+            <td>81232132</td>
+            <td id="td1"><a href='add'>Add</a></td>
+        </tr>
+         <tr>
+            <td>Sam</td>
+            <td>98327576</td>
+             <td id="td2"><a href='add'>Add</a></td>
+        </tr>
+         <tr>
+            <td>Sally</td>
+            <td>92326473</td>
+              <td id="td3"><a href='add'>Add</a></td>
+        </tr>
+    </table>
+
+</div>
+
+&nbsp;&nbsp;
+<div class="add">Add from list of friends: <br><br><input type="text" placeholder="Contact No./Name">
+<input type="button" value="search">
+<br>
+    <br>
+    <table class="tab1">
+        <tr>
+            <th id="thead2">Name</th>
+            <th>Contact Number</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>98473230</td>
+             <td id="td1"><a href='add'>Add</a></td>
+        </tr>
+         <tr>
+            <td>Jane</td>
+            <td>94343248</td>
+              <td id="td2"><a href='add'>Add</a></td>
+        </tr>
+         <tr>
+            <td>Jade</td>
+            <td>83573923</td>
+              <td id="td3"><a href='add'>Add</a></td>
+        </tr>
+    </table>
+</div>
+
+<div class="add">
+    Added to list:
+<br>
+<br>
+    <table class="tab2">
+        <tr>
+            <th id="thead3">Name</th>
+            <th>Contact Number</th>
+
+        </tr>
+        <tr>
+            <td id="td1">John</td>
+            <td id="td1">98473230</td>
+
+        </tr>
+         <tr>
+            <td id="td2">Shane</td>
+            <td id="td2">81232132</td>
+        </tr>
+         <tr>
+            <td id="td3">Jade</td>
+            <td id="td3">83573923</td>
+        </tr>
+    </table>
+
+</div>
+
+</div>
+
+    <br>
+<br>
+<br>
+
+
+
+<div align="center">
+<div class="option">
+    <a style=text-decoration:none href="http://127.0.0.1:5000/shaun2" id="a1">Split Equally</a>
+</div>
+<div class="option">
+<a style=text-decoration:none href="http://127.0.0.1:5000/shaun3" id="a1">Split Based On Recipient</a>
+</div>
+<div class="option">
+<a style=text-decoration:none href="http://127.0.0.1:5000/shaun4" id="a1">Customize Split</a>
+</div>
+</div>
+<br>
+<br>
+<div id="lastline">If recipient decline, cost will be beared by main payer</div>
+
+{% endblock %}

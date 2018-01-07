@@ -1,0 +1,104 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<style>
+     .head {
+         text-align: center;
+         background-color: #eee;
+         padding: 30px;
+          margin: 0 auto;
+         font-weight:300;
+     }
+    #des{
+        padding-left:20px;
+        padding-right:20px;
+        font-weight:300;
+        background-color:rgba(60,106,157,0.93);
+        margin:auto;
+        color:white;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+
+    .agree{
+        padding-left:20px;
+        font-size:120%;
+    }
+    #confirm{
+        padding-left:20px;
+    }
+    .yo{
+        padding-left:20px;
+        font-size:120%;
+        display:inline-block;
+    }
+    .amt{padding-left:20px;
+        font-size:120%;
+
+    }
+    #button{padding-left:20px;
+        font-size:120%;
+
+    }
+    #back{
+        padding-right:20px;
+        float:right;
+    }
+    .need{
+        text-align:center;
+        font-size:160%;
+        font-weight:bold;
+        font-style:oblique;
+    }
+    .hello{
+    padding-left:20px;
+        font-size:120%;
+
+
+    }
+
+</style>
+
+
+
+<h1 class="head">Split bill request from Shaun</h1>
+<h1 id="des">Item Description: Monster Curry</h1>
+<br>
+    <div class="yo">
+    Total amount paid by main payer: $100.20
+    </div>
+    <div class="yo">
+    Split bill type: Equally
+    </div>
+
+    <br>
+    <br>
+    <div class="hello">
+        Do you need more time to consider? To increase pending period,  <a href='/'>click here</a>
+    </div>
+<br>
+<div class="amt">
+    Amount to pay after split: $25.05
+</div>
+<br>
+    <div id="button">
+        <a href="http://127.0.0.1:5000/status1">View status of other pending recipients</a>
+    </div>
+<br>
+<div class="agree">Do you agree to pay the amount stated above?</div>
+<br>
+<div id="confirm">
+<input type="button" value="YES">&nbsp;&nbsp;<input type="button" value="NO">
+</div>
+<br>
+<br>
+
+<div class="need"> <img src="static/images/team_image/clock.png" width="20px" height="20px"> You have 3 days 0 hours 0 minutes to settle split payment
+        </div>
+
+
+
+
+
+{% endblock %}

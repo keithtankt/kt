@@ -1,0 +1,100 @@
+ #splitInfo {
+     /*width: 24.7%;*/
+ }
+
+
+
+ .contain_split_info span {
+     display: inline-block;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     max-width: 70%;
+ }
+
+  .contain_split_info img{
+      vertical-align: baseline;
+  }
+
+ #splitInfo span {
+     font-size: 150%;
+ }
+
+.addFriend {
+   border: 1px solid #ddd;
+}
+
+#filterSplit {
+    width:25%;
+    vertical-align: bottom ;
+}
+
+.headerDiv {
+    display: inline-block;
+    padding: .5%;
+    border: 1px solid #ddd;
+    width:24.7%;
+}
+
+#PayerInfo {
+    /*width:24.67%;*/
+}
+
+#PayerInfo span, #ParticipantInfo span, #filterSplit span {
+    font-size: 150%;
+}
+
+.Payerdiv img {
+    vertical-align: baseline;
+}
+
+.Payerdiv span {
+     display: inline-block;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     max-width: 70%;
+ }
+
+#ParticipantInfo {
+    /*width: 24.73%;*/
+}
+
+#ParticipantInfo a {
+    vertical-align: bottom ;
+}
+
+#creationInfo {
+    margin-bottom: 5%;
+}
+
+/*
+.arrows  {
+    width:4%;
+    height:4%;
+    margin-bottom: 5%;
+}
+
+#rightarrow {
+    float: right;
+    vertical-align: bottom;
+}*/
+
+#summaryTable {
+    margin-top: 5%;
+    clear: left;
+    width:25%;
+}
+
+
+#Summation {
+    text-decoration: underline ;
+}
+
+#declineColor {
+    color: red;
+}
+
+#pendingColor {
+    color: #ddd;
+}

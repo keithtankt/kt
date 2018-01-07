@@ -1,0 +1,177 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style>
+    .w3-container {
+        border:2px solid black;
+    }
+
+    .title {
+        width:500px;
+        height:70px;
+            border:5px #fff5ee;
+        color: blue;
+        font-size:200%;
+        margin:auto;
+        text-align:center;
+        border-style:outset;
+        font-style:Serif;
+        font-variant: small-caps;
+        margin-top:2%;
+    }
+
+    th   {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#000000;
+    color:#808080;
+    font-size:100%;
+    text-align:center;
+    font-style:Serif;
+    text-transform:uppercase;
+    font-style: italic;
+    }
+
+    h1 {
+        font-variant: small-caps;
+        font-size:150%;
+        text-align:center;
+
+    }
+
+    td {
+        border: 1px solid #ddd;
+        padding:8px;
+        text-align: center;
+        color: blue;
+        font-size:120%;
+    }
+
+    h1 {
+        font-size:150%;
+
+    }
+    .table1 {
+        margin-top:180px;
+
+    }
+
+    .table2 {
+        margin-top:80px;
+
+    }
+
+   /* .backgroundcolor {
+        background-color:lightcyan;
+    }*/
+
+    p1 {
+        box-sizing: content-box
+    }
+     table {
+        width:100%;
+    }
+
+</style>
+
+
+
+<div class="title">After Payment Summary</div>
+                    <div class="backgroundcolor">
+                    <div class="table1">
+                    <table align="center">
+                    <tr>
+                    <th>Date</th>
+                    <th>Used Method for Payment</th>
+                    <th>Item Description</th>
+                    <th>Total Amount For the Item [$]</th>
+                    <th>Total Amount you Pay [$]</th>
+                    </tr>
+
+                    <tr>
+                    <td>11/01/17</td>
+                    <td >Split Equally</td>
+                    <td>Monster Curry</td>
+                    <td>200</td>
+                    <td>50</td>
+                    </tr>
+                    </table>
+                    </div>
+
+    <div class ="table2">
+        <table align="center">
+        <tr>
+        <th>Participants</th>
+        <th>Status Accepted/Decline</th>
+        <th>Fixed Amount</th>
+        <th>Amount Split [$]</th>
+        </tr>
+        <tr>
+        <td style="color:green"><a style=text-decoration:none href="Layout[0].html"</a>Keith[Main Payer]</td>
+        <td>&#10004; </td>
+        <td>50</td>
+        <td>100</td>
+        </tr>
+        <tr>
+        <td style="color:red">Shaun</td>
+        <td>&#10006;</td>
+        <td>50</td>
+        <td>0</td>
+        </tr>
+        <tr>
+        <td style="color:yellow">Weikuang</td>
+        <td>&#10004;</td>
+        <td>50</td>
+        <td>50</td>
+        </tr>
+        <tr>
+        <td style="color:orange">Tristan[You]</td>
+        <td>&#10004;</td>
+        <td>50</td>
+        <td>50</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></Td>
+        <td>200</td>
+        </tr>
+        </table>
+    </div>
+
+    <div class="3table">
+
+    </div>
+</div><br>
+
+<div class="w3-container">
+
+<h1>Statistics for Total Amount each person Pay</h1>
+
+<div class="w3-light-grey">
+  <div class="w3-container w3-green w3-center" style="width:50%">50%</div>
+</div><br>
+
+<div class="w3-light-grey">
+  <div class="w3-container w3-red w3-center" style="width:5%">0%</div>
+</div><br>
+
+<div class="w3-light-grey">
+  <div class="w3-container w3-yellow w3-center" style="width:25%">25%</div>
+</div><br>
+
+<div class="w3-light-grey">
+  <div class="w3-container w3-orange w3-center" style="width:25%">25%</div>
+</div><br>
+
+
+
+
+{% endblock %}

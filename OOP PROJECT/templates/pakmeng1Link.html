@@ -1,0 +1,211 @@
+
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+
+
+     <style>
+
+
+        th {
+    padding-top:12px;
+    padding-bottom:12px;
+    text-align: left;
+    background-color:cornflowerblue;
+    color:antiquewhite;
+    font-size:100%;
+    text-align:center;
+    font-style:Serif;
+    text-transform:uppercase;
+    font-style: italic;
+    margin:center;
+    }
+
+
+    td {
+        border: 1px solid #ddd;
+        font-siztext-align:center;
+        color:blue;
+            }
+        .title {
+
+            width:700px;
+        height: 80x;
+            border:10px #fff5ee;
+        color: blue;
+        font-size:200%;
+        margin:auto;
+        text-align: center;
+        border-style: outset;
+        font-style:Serif;
+        font-variant: small-caps;
+    }
+
+     p {
+         font-variant: small-caps;
+         align:Center;
+         font-size:190%;
+
+     }
+
+     select {
+         float:right;
+     }
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+    </style>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
+
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Sucessful',3],
+  ['non-sucessful',1],
+
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Total Transaction [4]', 'width':800, 'height':300};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+
+</script>
+
+
+
+      <div class="title">Data Analysis</div>
+<div class="firstT" align="center"><br>
+<table>
+    <tr>
+    <th>Total Transaction Made</th>
+    <th style="background-color:Blue;">How many sucessfully ? </th>
+    <th style="background-color:red"    >How many was unsuccessfully ?</th>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>3</td>
+    <td>1</td>
+    </tr>
+</table>
+</div><br>
+
+<div id="piechart" align="center"></div>
+
+
+<p>Transaction with Keith <span id="select"><select name="cars">
+  <option value="saab">Highest to lowest Amount</option>
+  <option value="mercedes">Duration Period longest to shortest</option>
+</select></span>  </p>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:30%;">Description</th>
+    <th style="width:25%;">Period Purchased</th>
+    <th style="width:25%;">Duration</th>
+     <th style="width:25%;">Total Amount</th>
+  </tr>
+  <tr>
+    <td><a style=text-decoration:none href="http://127.0.0.1:5000/pakmeng1"</a>Monster Curry</td>
+    <td>02/07/2017</td>
+    <td>3</td>
+    <td>$200</td>
+  </tr>
+  <tr>
+      <td>Pizza</td>
+    <td>11/06/2017</td>
+    <td>3</td>
+    <td>$219</td>
+  </tr>
+  <tr>
+      <td>Clothes</td>
+    <td>03/05/2017</td>
+    <td>3</td>
+    <td>$250</td>
+  </tr>
+  </tr>
+  <tr>
+       <td>Korean Buffet</td>
+    <td>01/01/2017</td>
+    <td>3</td>
+    <td>$390</td>
+  </tr>
+  </tr>
+  <tr>
+       <td>Empire State</td>
+    <td>09/06/2016</td>
+    <td>2</td>
+    <td>$130</td>
+  </tr>
+</table>
+{% endblock %}

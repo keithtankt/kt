@@ -1,0 +1,150 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<style>
+#des{
+  padding-left:20px;
+        padding-right:20px;
+        font-weight:300;
+        background-color:rgba(60,106,157,0.93);
+        margin:auto;
+        color:white;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+.h{
+        text-align:center;
+        background-color:#eee;
+        padding:30px;
+     margin: 0 auto;
+    font-weight:300;
+    }
+#right{
+        float:right;
+    }
+    .confirm{
+        font-size:120%;
+        padding-left:20px;
+
+    }
+
+
+    .last{
+        display:inline-block;
+        padding-left: 20px;
+        font-size:120%;
+    }
+    .def{
+        padding-left:20px;
+        font-size:120%;
+    }
+
+    .big{
+
+        font-size:150%;
+        text-align:center;
+
+    }
+    #help{
+        float:right;
+        padding-left:10px;
+    }
+    .images{
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:20px;
+        display:inline-block;
+        border:1px solid black;
+    }
+    .hihello{
+        overflow-y:scroll;
+
+    }
+
+</style>
+
+
+
+
+<h1 class="h">Split Bill Option: Based On Recipient</h1>
+
+
+<h1 id="des">Item Description: Monster Curry <div id="right">Amount paid in total: $100.20</div></h1>
+<br>
+ <div class="big">Split bill recipients</div>
+
+<br>
+<div class="hihello" align="center">
+<div class="images">
+    <br>
+    <br>
+
+
+    <img src="static/images/team_image/profile.jpg" width="50px" height="50px">
+
+
+<div id="help">
+    Name: John<br>
+    Contact No: 98473230<br>
+    Amount: ???
+</div>
+</div>
+
+    <div class="images">
+    <br>
+    <br>
+
+
+    <img src="static/images/team_image/profile.jpg" width="50px" height="50px">
+
+
+<div id="help">
+    Name: Shane<br>
+    Contact No: 81232132<br>
+    Amount: ???
+</div>
+</div>
+<div class="images">
+    <br>
+    <br>
+
+
+    <img src="static/images/team_image/profile.jpg" width="50px" height="50px">
+
+
+<div id="help">
+    Name: Jade<br>
+    Contact No: 83573923<br>
+    Amount: ???
+</div>
+</div>
+
+</div>
+<br>
+<br>
+<div class="helloworld" align="center">
+<div class="def">
+    Maximum amount allowed to be paid by each recipient: $25.05
+</div>
+<br>
+
+<div class="confirm">
+    Pending period: 3 days (Default)
+</div>
+    <br>
+    <div class="confirm">
+    Change Duration: <input type="text" placeholder="No. of days"> <input type="button" value="Change">
+    </div>
+    <br>
+
+<div class="last">
+Confirm and proceed with sending of request?
+
+</div>
+<div class="last">
+<input type="button" value="YES">&nbsp;&nbsp;<input type="button" value="NO">
+</div>
+</div>
+
+{% endblock %}

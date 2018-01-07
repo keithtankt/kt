@@ -1,0 +1,155 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+
+<style>
+
+
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 150px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+h1 {text-align:center;}
+
+#date,#pay ,#cost {font-size: 40px;}
+
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin:0 0 0 0;
+}
+
+td {
+    height: 55px;
+    vertical-align: bottom;
+}
+
+
+#tab {
+margin:20px 125px 0 0;}
+    #piechart{float:right;}
+
+
+#piechart {margin:0 80px 20px 0}
+
+table#tab tr:nth-child(odd) {
+    background-color: #eee;
+}
+table#tab tr:nth-child(even) {
+   background-color:#fff;
+
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th {
+    background-color:rgba(60, 106, 157, 0.93)   ;
+    color: white;
+}
+
+.size {font-size:20px;}
+</style>
+
+
+
+
+
+
+<div style="height: 160px; width: 100%; box-sizing:border-box; display:table;">
+    <div class="box" style="float:left;margin-right:30px; height:100%;   width:23.2%;display:table-cell;background: #E8E8E8;box-sizing: border-box;"><h1 style="text-align:left;">Date:</h1><p class="size"> 11/12/2017</p></div>
+    <div class="box" style="float:left; margin-right:30px; height:100%; width:23.2%;display:table-cell; background: #E8E8E8; box-sizing: border-box;"><h1 style="text-align:left;">Intial Cost:</h1><p class="size">$720.95</p></div>
+    <div class="box" style="float:left;  height:100%; margin-right:30px; width:23.2%;display:table-cell; background: #E8E8E8; box-sizing: border-box;"><h1 style="text-align:left;">Pre-Set Percentage:</h1><p class="size">60%</p></div>
+    <div class="box" style="float:left;  height:100%; width:23.2%;display:table-cell; background: #E8E8E8; box-sizing: border-box;"><h1 style="text-align:left;">Total Amount Absorbed:</h1><p class="size">$0.02</p></div>
+    <br style="clear:left" />
+</div>
+
+<br>
+<br>
+<table align="left"  id="t01">
+  <tr>
+    <th>People involved</th>
+    <th>Per Person Ought to Pay/$</th>
+    <th>Cost Per Person/%</th>
+      <th>Total Cost Paid/$</th>
+
+  </tr>
+  <tr>
+      <td style="width:330px; "><a href="http://localhost:63342/Library/templates/includes/IndividualSummary.html?_ijt=9m2devvnuscich6gvbv57eqqnr">Peter</a></td>
+    <td style="width:337px;">$72.095</td>
+    <td style="width:350px">10%</td>
+      <td>$72.09</td>
+
+
+  </tr>
+  <tr>
+    <td><a href="http://localhost:63342/Library/templates/includes/IndividualSummary.html?_ijt=9m2devvnuscich6gvbv57eqqnr">Lois</a></td>
+    <td>$72.095</td>
+    <td>10%</td>
+      <td>$72.09</td>
+
+
+  </tr>
+  <tr>
+    <td><a href="http://localhost:63342/Library/templates/includes/IndividualSummary.html?_ijt=9m2devvnuscich6gvbv57eqqnr">Joe</a></td>
+    <td>$72.095</td>
+    <td>10%</td>
+      <td>$72.09</td>
+
+
+  </tr>
+  <tr>
+    <td><a href="http://localhost:63342/Library/templates/includes/IndividualSummary.html?_ijt=9m2devvnuscich6gvbv57eqqnr">Cleveland</a></td>
+    <td>$72.095</td>
+    <td>10%</td>
+      <td>$72.09</td>
+
+
+  </tr>
+
+</table>
+&nbsp
+&nbsp
+<table id="tab" style="width:49.5%;">
+  <tr>
+    <th>People who declined:</th>
+    <td>-</td>
+  </tr>
+
+    <tr><th>Total Amount Paid by Recipient</th><td>$288.4</td></tr>
+    <img id="piechart" src="static/images/team_image/meta-chart (5).svg" alt="Smiley face" width="480" height="362">
+    <tr><th>Total Amount Ought to Pay:</th><td>$432.57</td></tr>
+  <tr><th style="font-size:40px;">Total Amount Paid:</th><td style="font-size: 30px;">$432.59</td></tr>
+
+</table>
+
+
+
+
+{% endblock %}

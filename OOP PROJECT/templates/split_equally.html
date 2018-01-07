@@ -1,0 +1,167 @@
+
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+
+    <div id="splitInfo" class="headerDiv" >
+
+                <span id="splitTitle">Split based on recipient</span>
+                <div class="contain_split_info">
+                    <img src="static/images/10980-200.png" alt="group icon" width="10%" height="10%">
+                    <span>14</span>
+                </div>
+
+                <div class="contain_split_info">
+                    <img src="static/images/gift-icon.png" alt="gift icon" width="10%" height="10%">
+                    <span>$147</span>
+                </div>
+
+                <div class="contain_split_info">
+                    <img src="static/images/download.png" alt="amount payable icon" width="10%" height="10%">
+                    <span>$10.50</span>
+                </div>
+    </div>
+
+    <div id="PayerInfo" class="headerDiv" >
+                <span>Main Payer</span>
+                <div class="Payerdiv">
+                    <img src="static/images/53160-200.png" alt="main payer icon" width="10%" height="10%">
+                    <span>Willy</span>
+                </div>
+
+                <div class="Payerdiv">
+                    <img src="static/images/download.png" alt="paid icon" width="10%" height="10%">
+                    <span>$42</span>
+                </div>
+
+                <div class="Payerdiv">
+                    <img src="static/images/3055-200.png" alt="amount payable icon" width="10%" height="10%">
+                    <span>$31.50</span>
+                </div>
+    </div>
+
+
+
+     <div class="headerDiv" id="ParticipantInfo">
+         <span>Me</span>
+         <br>
+         <img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="14.5%" height="22%">
+         <br>
+         <span>Cap: </span>  <span>$50</span>
+        <br>
+        <a href="#" class="btn btn-info" role="button">Cap</a>
+        <a href="#" class="btn btn-info" role="button">Extend</a>
+         <a href="#" class="btn btn-info" role="button">Decline</a>
+
+    </div>
+
+    <div class="headerDiv" id="filterSplit">
+        <div id="creationInfo">
+            <span>Requested on 17th March 2016</span>
+            <br>
+            <span>3day : 1hour: 15min</span>
+            <br>
+            <span>+ 5hour : 26min</span>
+        </div>
+
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sort
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">A-Z</a>
+                <br>
+                <a class="dropdown-item" href="#">Z-A</a>
+                <br>
+                <a class="dropdown-item" href="#">Highest to Lowest</a>
+                <br>
+                <a class="dropdown-item" href="#">Lowest to Highest</a>
+                <br>
+                <div class="dropdown-divider">
+                </div>
+                </div>
+            </div>
+
+
+            <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Show
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Contact List</a>
+                <br>
+                <a class="dropdown-item" href="#">New</a>
+                <br>
+                <a class="dropdown-item" href="#">Pending</a>
+                <br>
+                <a class="dropdown-item" href="#">Accept</a>
+                <br>
+                <a class="dropdown-item" href="#">Decline</a>
+                <br>
+                <div class="dropdown-divider">
+
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-info" role="button">Reset</a>
+    </div>
+
+    <table id="pendingTable" class="table table-bordered">
+        <tr>
+            <td align="center" colspan="4"><h1>3day : 1hour : 6min</h1>  </td>
+        </tr>
+
+        <tr>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%"><br><span class="addFriend">Tony</span></td>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557 - Copy.jpg" alt="profile icon" width="30%" height="10%" ><br>Roxanne</td>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557 - Copy.jpg" alt="profile icon" width="30%" height="10%" ><br>Amanda</td>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%" ><br>Jonny</td>
+        </tr>
+
+        <tr>
+            <td  align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%"><br>Samuel</td>
+            <td  align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%"><br>Megan</td>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%"><br>Reuben</td>
+            <td  align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%"><br>Sharon</td>
+        </tr>
+
+        <tr>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557 - Copy (2).jpg" alt="profile icon" width="30%" height="10%"><br>Joyce</td>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%" ><br>William</td>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%" ><br><span class="addFriend">Kate</span></td>
+            <td align="center">$10.50<br><img src="static/images/profile-user-silhouette_318-40557.jpg" alt="profile icon" width="30%" height="10%" ><br>Janet</td>
+        </tr>
+    </table>
+
+
+
+
+    <table class="table table-bordered" id="summaryTable">
+
+         <tr>
+             <td align="center">Accept</td>
+             <td align="center"><span id="acceptColor">11</span></td>
+        </tr>
+
+         <tr>
+             <td align="center">Decline</td>
+             <td align="center"><span id="declineColor">2</span></td>
+        </tr>
+
+         <tr>
+             <td align="center">Pending</td>
+             <td align="center"><span id="pendingColor">1</span></td>
+        </tr>
+
+      <tr>
+          <td align="center">Total</td>
+          <td align="center"><span id="Summation">14</span></td>
+        </tr>
+    </table>
+
+{% endblock %}
